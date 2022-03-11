@@ -147,8 +147,14 @@ const showPosts = (posts) => {
   });
 };
 
+// Display Liked Posts
 const displayLikedPosts = () => {
   const likedPosts = getLikedPosts();
+
+  if (likedPosts.length !== 0) {
+    document.getElementById("liked").textContent = '';
+  }
+
   likedPosts.forEach((post) => {
     const div = createPost(post);
     document.getElementById("liked").appendChild(div);
