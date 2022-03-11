@@ -31,6 +31,7 @@ const displayContent = (text) => {
   return text.length < 30 ? 'text' : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
+// Switch Tab
 const switchTab = (id) => {
   if (id === "posts") {
     document.getElementById("posts").style.display = "grid";
@@ -51,6 +52,7 @@ const switchTab = (id) => {
   }
 };
 
+// Create Post
 const createPost = (post) => {
   const image = post.image;
   const profilePic = post.userImage;
@@ -159,6 +161,7 @@ const displayReportedPosts = () => {
   });
 };
 
+// Fetch Data
 const loadPosts = async () => {
   let data = await fetch('../data/posts.json');
   posts = await data.json();
