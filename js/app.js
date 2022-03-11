@@ -27,8 +27,9 @@ const reportPost = (id) => {
   showPosts(remainingPosts);
 };
 
+// Display Comment
 const displayContent = (text) => {
-  return text.length < 30 ? 'text' : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
+  return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
 // Switch Tab
